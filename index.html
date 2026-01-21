@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tyler@tlr.sh:~$</title>
+    <meta name="description" content="Tyler's Terminal - Modern developer interface">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Vaporwave Background -->
+    <div class="vaporwave-bg">
+        <div class="gradient-waves"></div>
+        <div class="soft-glow"></div>
+    </div>
+
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-title">tyler@tlr.sh: ~</div>
+            <div class="terminal-controls">
+                <span class="control-btn minimize"></span>
+                <span class="control-btn maximize"></span>
+                <span class="control-btn close"></span>
+            </div>
+        </div>
+        
+        <div class="terminal-body" id="terminal">
+            <div class="welcome-section">
+                <div class="logo">
+                    <span class="logo-text">tlr.sh</span>
+                </div>
+                <div class="welcome-text">
+                    <p>Welcome to Tyler's terminal interface</p>
+                    <p class="subtitle">Type <span class="highlight">help</span> to see available commands</p>
+                </div>
+            </div>
+            
+            <div class="terminal-content">
+                <div class="ascii-idle" id="asciiIdle">
+                    <div class="idle-animation">
+                        <pre class="ascii-art-idle">
+   ╭─────╮
+   │ ◉ ◉ │  
+   │  ─  │  
+   ╰─────╯
+      │
+   ╭──┴──╮
+   │     │
+   ╰─────╯
+    ╱   ╲
+   ╱     ╲
+                        </pre>
+                        <div class="idle-text">Waiting for input...</div>
+                    </div>
+                </div>
+                
+                <div class="command-history" id="commandHistory">
+                    <!-- Commands will be added here dynamically -->
+                </div>
+                
+                <div class="input-line">
+                    <span class="prompt">$ </span>
+                    <input type="text" id="commandInput" class="command-input" autocomplete="off" spellcheck="false" placeholder="Type a command...">
+                    <span class="cursor">|</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="status-bar">
+            <div class="status-left">
+                <span class="status-item">●</span>
+                <span class="status-item" id="currentTime"></span>
+            </div>
+            <div class="status-right">
+                <span class="status-item">Press ? for help</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="help-menu" id="helpMenu">
+        <div class="help-content">
+            <h3>Available Commands</h3>
+            <div class="command-list">
+                <div class="command-item">
+                    <span class="cmd">about</span>
+                    <span class="desc">Learn about Tyler</span>
+                </div>
+                <div class="command-item">
+                    <span class="cmd">skills</span>
+                    <span class="desc">View technical skills</span>
+                </div>
+                <div class="command-item">
+                    <span class="cmd">contact</span>
+                    <span class="desc">Get contact information</span>
+                </div>
+                <div class="command-item">
+                    <span class="cmd">social</span>
+                    <span class="desc">Social media links</span>
+                </div>
+                <div class="command-item">
+                    <span class="cmd">clear</span>
+                    <span class="desc">Clear terminal</span>
+                </div>
+                <div class="command-item">
+                    <span class="cmd">theme</span>
+                    <span class="desc">Toggle color theme</span>
+                </div>
+            </div>
+            <p class="help-note">Press ESC or click outside to close</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
